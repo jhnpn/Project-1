@@ -1,5 +1,7 @@
 # Project-1
 
+Potential Name : gamR
+
 AS A gamer who needs to track games I want to buy and play.
 
 I WANT an app that tracks games on my wish list and my backlog.
