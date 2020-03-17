@@ -48,7 +48,6 @@ navbar {
   
   /* Style the search field */
   form.example input[type=text] {
-    padding: 10px;
     font-size: 14px;
     border: 1px solid grey;
     float: left;
