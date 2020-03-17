@@ -20,3 +20,5 @@ Local Storage for search results, and wishlist items.
 Shopping Cart-like feature for Backlog 
 
 Possible user info API for hours played.
+
+custom local storage items for each list. might use data attribute to save after each.
