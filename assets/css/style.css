@@ -5,6 +5,14 @@ body {
     
 }
 
+main {
+  background-color: white;
+  width: 800px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: thin black solid;
+}
 p {
     padding-left: 15%;
     padding-right: 15%;
@@ -24,8 +32,26 @@ p {
 #signin {
     background-color: white;
     padding: 5% 20%;
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
 } 
 
+h1 {
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-family: fantasy;
+  color: black;
+}
+#logo {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+}
 
 navbar {
     display: grid;
@@ -40,6 +66,11 @@ navbar {
     line-height: 40px;
     justify-items: right;
   }
+#nav {
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;s
+}
 
 
   * {
@@ -53,6 +84,7 @@ navbar {
     float: left;
     width: 100px;
     background: #f1f1f1;
+    height: 36px;
   }
   
   /* Style the submit button */
