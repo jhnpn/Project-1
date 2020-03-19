@@ -99,7 +99,8 @@ navbar {
     border-left: none; /* Prevent double borders */
     cursor: pointer;
   }
-  
+ 
+
   form.example button:hover {
     background: #566d80;
   }
@@ -112,7 +113,29 @@ navbar {
   }
 
   footer {
-      margin: 0;
-      height: 50px;
-      background-color: black;
+    
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+    height: 50px;      
+    background-color: black;
+    padding-top: 10px;
+  }
+  #steps {
+    text-align: center;
+    font-weight: bold;
+  }
+  a {
+    color:white;
+  }
+  a:active {
+    color:red;
+  }
+  h3 {
+    text-align: center;
+  }
+  #wish {
+    border-right: thin black solid;
   }
