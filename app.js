@@ -1,33 +1,59 @@
 
 
 $(document).ready(function () {
-    jQuery.ajaxPrefilter(function(options) {
-        if (options.crossDomain && jQuery.support.cors) {
-            options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
-        }
-    });
-    $('#search').on('keyup', function(e){
+
+
+    // var searchTrigger = function(){
+    //     var term = 'mario'
+    //     $.ajax({
+    //         url: 'https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/?search='+term+'&fields=name,id',
+    //         type: 'post',
+    //         headers: {
+    //             'Accept':'application/json',
+    //             'user-key':'6fc2ca57683cbf5b7414f3a79d44161a',
+    //             'Access-Control-Allow-Origin':'localhost:5500'
+            
+    //         }   
+    //     }).then(function(response){
+    //         console.log('this is my response ' + response)
+    //         return response
+    //     }).then(function(data){
+    //         console.log(data);
+    //     })
+    //     .catch(function(error){
+    //         console.log('This is my error '+ error)
+    //     });
+    // }
+
+    // searchTrigger();
+
+    $('#search').on('keypress', function(e){
         let term = e.target.value
         console.log(e.key);
         if (e.key === "Enter") {
+            e.preventDefault();
             $.ajax({
-                url: 'https://api-v3.igdb.com/games/',
+                url: 'https://cors-anywhere.herokuapp.com/https://api-v3.igdb.com/games/?search='+term+'&fields=name,id',
                 type: 'post',
-                dataType : "application/json",
-                data: `fields *; where name = ${term}`,
-                headers: { 
+                headers: {
+                    'Accept':'application/json',
                     'user-key':'6fc2ca57683cbf5b7414f3a79d44161a',
-                    'Access-Control-Allow-Origin': '*'
-                },
-                success: function (data) {
-                    console.info(data);
-                }, 
-                error : function(err){
-                    console.log(term);
-                    console.log("we have an error!")
-                }
+                    'Access-Control-Allow-Origin':'localhost:5500'
+                
+                }   
+            }).then(function(response){
+                console.log('this is my response ' + response)
+                return response
+            }).then(function(data){
+                console.log(data);
+            })
+            .catch(function(error){
+                console.log('This is my error '+ error)
             });
         }
+    
+        }
         
-    })
+    )
 });
+
