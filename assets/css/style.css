@@ -169,3 +169,7 @@ h1 {
    margin: auto;
    margin-bottom: 10px;
  }
+ .move-right {
+   float: right;
+   margin-right: 10px;
+ }
