@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <title>gamR</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="shortcut icon" type="image/png" href="assets/images/gamerfavicon.png">
 </head>
 
 <body>
@@ -25,6 +26,14 @@
           <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign In/Sign up</a></li>
           
         </ul>
+        <ul id="slide-out" class="sidenav">
+          <li><a href="news.html">News & Reviews</a></li>
+          <li><a href="backlog.html">Wish List & Back Log</a></li>
+          <li><a href="aboutus.html">About & Contact</a></li>
+          <li><a>Sign Out</a></li>
+        </ul>
+          <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
       </div>
       
     </nav>
@@ -43,8 +52,10 @@
   </header>
 
   <main class="z-depth-5">
-    <h3>About Us</h3>
-    <p>Are you one of the few that likes to keep track of all things gaming?
+    <!-- <div class="row"> -->
+      <div>
+        <h3>About Us</h3>
+        <p>Are you one of the few that likes to keep track of all things gaming?
         Well gamR is an app that will meet your gaming needs.
         Here are some of the features you can access here at gamR:
         - Compile a list of games you've completed, as well as create a wish list of games you want to play.
@@ -54,6 +65,29 @@
         With gamR, we hope to become one of the main sources for all things gaming. Share with friends your list of achievements as well as see their accomplishments. We aim to be up-to-date with the latest trends in the industry and keep you updated with what's happening not only out there, but in here as well.
         We plan to grow more in the future so if you have any suggestions, let us know :D
         gamRs UNITE!!!</p>
+      </div>
+      <div id="contactUs">
+        <h3>Contact</h3> 
+        <form action="action_page.php">
+
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="email">Email</label>
+          <input type="email" name="email" placeholder="Your email..">
+      
+          <label for="subject">Subject</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      
+          <input id="summitContact" type="submit" value="Submit">
+      
+        </form>       
+        
+      </div>
+    </div>
   </main>
   <div id="modal1" class="modal">
     <div class="modal-content">
