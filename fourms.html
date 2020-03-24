@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>gamR</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo"><img id="logo" src="assets/images/gamrwhite300px.png"
+                        width="90px" title="gamR Logo" alt="Logo"></a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="news.html">News & Reviews</a></li>
+                    <li><a href="log.html">gamR Log</a></li>
+                    <li><a href="fourms.html">Fourms</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign In/Sign up</a></li>
+
+                </ul>
+            </div>
+
+        </nav>
+        <nav>
+            <div class="nav-wrapper">
+                <form>
+                    <div class="input-field">
+                        <input id="search" type="search" required>
+                        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+                        <i class="material-icons">close</i>
+                    </div>
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <img class ="game-logo" src="assets/images/gamrblack300px.png">
+
+    <main class="z-depth-5">
+        <p>
+            <strong>Still in the Works...</strong> <br> <br>
+        </p>
+    </main>
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <form id="form-left" action="action_page.php" method="post">
+
+                <div class="container">
+                    <h5>Sign in</h5>
+                    <hr>
+                    <label id="loginText" for="loginName"><b>Username</b></label>
+                    <input type="text" placeholder="Enter Username" name="uname" required>
+
+                    <label id="loginText" for="loginPass"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <button id="loginBtn" type="submit">Login</button>
+                </div>
+
+                <div class="container">
+                    <button type="button" id="cancelLogin" class="cancelbtn">Cancel</button>
+                    <span class="psw">Forgot <a href="#">password?</a></span>
+                </div>
+            </form>
+            <form id="form-right" action="action_page.php">
+                <div class="container">
+                    <h5 id="signUpForm">Sign Up</h5>
+                    <hr>
+                    <label for="email"><b>Email</b></label>
+                    <input type="text" placeholder="Enter Email" name="email" required>
+
+                    <label for="psw"><b>Password</b></label>
+                    <input type="password" placeholder="Enter Password" name="psw" required>
+
+                    <label for="psw-repeat"><b>Repeat Password</b></label>
+                    <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+                    <div class="clearfix">
+                        <button type="button" id="cancelLogin" class="cancelbtn">Cancel</button>
+                        <button type="submit" id="loginBtn" class="signupbtn">Sign Up</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer id="page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2020 Copyright
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="assets/JavaScript/script.js"></script>
+</body>
+
+</html>
