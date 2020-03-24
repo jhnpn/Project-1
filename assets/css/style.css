@@ -17,6 +17,11 @@ p {
     font-size: 15px;
     overflow: hidden;
 }
+@media screen and (min-width: 768px) {
+  #slide-out {
+    display: none;
+  }
+}
 
 .sign-in {
     display: grid;

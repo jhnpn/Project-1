@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    $('.sidenav').sidenav();
     $('.modal').modal();
     jQuery.ajaxPrefilter(function(options) {
         if (options.crossDomain && jQuery.support.cors) {
