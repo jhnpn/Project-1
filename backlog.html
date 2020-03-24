@@ -5,25 +5,37 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="shortcut icon" type="image/png" href="assets/images/gamerfavicon.png">
   <!-- Compiled and minified CSS -->
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <title>gamR</title>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <nav>
       <div class="nav-wrapper">
-        <a href="index.html" class="brand-logo"><img src="assets/images/gamrwhite300px.png" width="90px" title="gamR Logo"
+        <a href="index.html" class="brand-logo"><img id="logo" src="assets/images/gamrwhite300px.png" width="90px" title="gamR Logo"
             alt="Logo"></a>
         <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li><a href="news.html">News & Reviews</a></li>
-          <li><a href="backlog.html">Wishlist & Back Log</a></li>
-          <li><a href="about.html">About & Contact</a></li>
+          <li><a href="backlog.html">Wish List & Back Log</a></li>
+          <li><a href="aboutus.html">About & Contact</a></li>
+          <li><a class="waves-effect waves-light btn modal-trigger" href="#modal1">Sign In/Sign up</a></li>
+          
         </ul>
+        <ul id="slide-out" class="sidenav">
+            <li><a href="news.html">News & Reviews</a></li>
+            <li><a href="backlog.html">Wish List & Back Log</a></li>
+            <li><a href="aboutus.html">About & Contact</a></li>
+            <li><a>Sign Out</a></li>
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
       </div>
+      
     </nav>
     <nav>
       <div class="nav-wrapper">
@@ -36,58 +48,99 @@
         </form>
       </div>
     </nav>
-
+  
   </header>
 
-  <main>
+  <main class="z-depth-5">
+      <h3>Wish List & Backlog</h3>
     <div class="collection">
-      <a href="#!" class="collection-item">Dragon Quest IV
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Played</span>
-        </label>
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Wishlist</span>
-        </label>
-      </a>
-
-      <a href="#!" class="collection-item active">Zelda BOTW
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Played</span>
-        </label>
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Wishlist</span>
-        </label>
-      </a>
-      <a href="#!" class="collection-item">Shadow of the Colossus
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Played</span>
-        </label>
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Wishlist</span>
-        </label>
-      </a>
-      <a href="#!" class="collection-item">Apex Legends
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Played</span>
-        </label>
-        <label class="move-right">
-          <input type="checkbox" class="filled-in" checked="checked" />
-          <span>Wishlist</span>
-        </label>
-      </a>
-    </div>
-
-
+        <a href="#!" class="collection-item">Dragon Quest IV
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Played</span>
+          </label>
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Wishlist</span>
+          </label>
+        </a>
+  
+        <a href="#!" class="collection-item active">Zelda BOTW
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Played</span>
+          </label>
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Wishlist</span>
+          </label>
+        </a>
+        <a href="#!" class="collection-item">Shadow of the Colossus
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Played</span>
+          </label>
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Wishlist</span>
+          </label>
+        </a>
+        <a href="#!" class="collection-item">Apex Legends
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Played</span>
+          </label>
+          <label class="move-right">
+            <input type="checkbox" class="filled-in" checked="checked" />
+            <span>Wishlist</span>
+          </label>
+        </a>
+        
+      </div>
+      <button id="addGame">Add Game To List</button>
   </main>
-
-  <footer class="page-footer">
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+        <form id="form-left" action="action_page.php" method="post">
+          
+            <div class="container">
+                <h5>Sign in</h5>
+                <hr>
+              <label id="loginText" for="loginName"><b>Username</b></label>
+              <input type="text" placeholder="Enter Username" name="uname" required>
+          
+              <label id="loginText" for="loginPass"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <button id="loginBtn" type="submit">Login</button>
+            </div>
+          
+            <div class="container">
+              <button type="button" id="cancelLogin" class="cancelbtn">Cancel</button>
+              <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+        <form id="form-right" action="action_page.php" >
+            <div class="container">
+              <h5 id="signUpForm">Sign Up</h5>
+              <hr>
+              <label for="email"><b>Email</b></label>
+              <input type="text" placeholder="Enter Email" name="email" required>
+          
+              <label for="psw"><b>Password</b></label>
+              <input type="password" placeholder="Enter Password" name="psw" required>
+          
+              <label for="psw-repeat"><b>Repeat Password</b></label>
+              <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+              <div class="clearfix">
+                <button type="button"  id="cancelLogin" class="cancelbtn">Cancel</button>
+                <button type="submit" id="loginBtn" class="signupbtn">Sign Up</button>
+              </div>
+            </div>
+          </form>
+    </div>
+  </div>
+  <footer id="page-footer">
     <div class="footer-copyright">
       <div class="container">
         © 2020 Copyright
@@ -96,8 +149,9 @@
     </div>
   </footer>
   <!-- Compiled and minified JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <script src="assets/js/main.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
