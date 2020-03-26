@@ -20,6 +20,7 @@ $(document).ready(function () {
             return response
         }).then(function(data){
             console.log(data);
+            generateList(data);
         })
         .catch(function(error){
             console.log('This is my error '+ error)
@@ -85,6 +86,7 @@ $(document).ready(function () {
                 return response
             }).then(function(data){
                 console.log(data);
+                generateList(data);
             })
             .catch(function(error){
                 console.log('This is my error '+ error)
@@ -94,4 +96,28 @@ $(document).ready(function () {
         }
         
     )
+
+    var generateList = function (data) {
+        $("#list-target").empty();
+        for (i = 0; i < data.length; i++) {
+            var name = data[i].name;
+            
+            var label = $("<label>");
+            var checkbox = $("<input>");
+            $(checkbox).attr("type", "checkbox");
+            $(label).append(checkbox);
+            var text = $("<span>");
+            $(text).text(name);
+            $(label).append(text);
+
+            var listItem = $("<div>");
+            $(listItem).addClass("collection-item");
+            $(listItem).append(label);
+
+            // var listItem = $('.collection-item');
+            // listItem.text(name);
+            $("#list-target").append(listItem);
+            // $("#list-target").append("<li>" + name + "</li>");
+        }
+    }
 });
